@@ -15,8 +15,8 @@ const Navbar = ({darkTheme, setDarkTheme}) => {
             <button type="button" onClick={() => setDarkTheme(!darkTheme)} className='text-xl dark:bg-gray-50 dark:text-gray-900 bg-white border rounded-full px-2 py-1 hover:shadow-lg'>
                 {darkTheme ? 'Light' : 'dark'}
             </button>
-            <Search />
           </div>
+          <Search />
       </div>
     </div>
   );
