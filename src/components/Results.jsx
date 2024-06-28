@@ -3,20 +3,19 @@ import { useResultContext } from '../contexts/ResultsCP';
 import Loading from './Loading';
 
 const Results = () => {
-  const {results, isLoading} = useResultContext();
+  const { results, isLoading } = useResultContext();
 
   if (isLoading) {
     return <Loading />;
   }
 
-  if (results.length === 0 ) {
+  if (results.length === 0) {
     return <p>No results found.</p>;
   }
 
   return (
     <div>
       <div className="results">
-        <h2 className="text-2xl font-bold mb-4">Web Results</h2>
         {results.map((result, index) => (
           <div key={index} className="result-item border rounded p-4 mb-4">
             <h3 className="text-xl font-bold">
